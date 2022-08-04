@@ -32,6 +32,29 @@ public class Game {
   
  for(int question=0 ; question<questionSet.size() ; question++){
      System.out.println(questionSet.get(question).getQuestion());
-}
+     
+     int numChoices = questionSet.get(question).getChoices().size();
+     
+     
+     
+     
+     for(int choice = 0; choice <numChoices; choice++){
+ System.out.println((choice + 1)+ ": "+ 
+         questionSet.get(question).getChoices().get(choice));
+ }
+     int playerAnswer = scan.nextInt();
+     ArrayList<String> choiceSet = 
+             questionSet.get(question).getChoices();
+     String correctAnswer = questionSet.get(question).getAnswer();
+     int correctAnswerIndex = choiceSet.indexOf(correctAnswer);
+     if(playerAnswer == correctAnswerIndex + 1){
+     numCorrect++;
+     }
+
+ }
+ scan.close();
+ System.out.println("You got " + numCorrect + " correct answer(s)");
     }
 }
+    
+
