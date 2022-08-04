@@ -25,4 +25,13 @@ public class Game {
     
     Collections.shuffle(questionSet, new Random());
     }
+    
+    public void start() {
+    Scanner scan = new Scanner(System.in);
+    int numCorrect = 0;
+  
+ for(int question=0 ; question<questionSet.size() ; question++){
+     System.out.println(questionSet.get(question).getQuestion());
+}
+    }
 }
