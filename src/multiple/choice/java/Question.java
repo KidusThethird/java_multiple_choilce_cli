@@ -22,4 +22,13 @@ public Question(String question, String[] choices, String answer){
 public String getQuestion(){
  return question;
 }
+public ArrayList<String> getChoices(){
+
+return choices;}
+
+public String getAnswer(){
+    
+
+return answer;
+}
 }
